@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D3070DC1F24F781006DF95D /* CurrencyConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3070DB1F24F781006DF95D /* CurrencyConverter.swift */; };
 		32385DF51F13D4550091DD9D /* Trigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32385DF41F13D4550091DD9D /* Trigonometry.swift */; };
 		32385DF71F13DF2B0091DD9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32385DF61F13DF2B0091DD9D /* Assets.xcassets */; };
 		32385DFC1F13E25A0091DD9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32385DFA1F13E25A0091DD9D /* Main.storyboard */; };
@@ -14,9 +15,11 @@
 		32FA49C41F1122B500707DDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA49C31F1122B500707DDC /* AppDelegate.swift */; };
 		32FA49C61F1122B500707DDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA49C51F1122B500707DDC /* ViewController.swift */; };
 		32FA49CE1F1122B500707DDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32FA49CC1F1122B500707DDC /* LaunchScreen.storyboard */; };
+		736F569D9CBCBF8D3B0B224C /* Pods_MathPal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0A072C784811C5CC518E99 /* Pods_MathPal.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D3070DB1F24F781006DF95D /* CurrencyConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyConverter.swift; sourceTree = "<group>"; };
 		32385DF41F13D4550091DD9D /* Trigonometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trigonometry.swift; sourceTree = "<group>"; };
 		32385DF61F13DF2B0091DD9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32385DFB1F13E25A0091DD9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -26,6 +29,9 @@
 		32FA49C51F1122B500707DDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		32FA49CD1F1122B500707DDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32FA49CF1F1122B500707DDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D0DA4083E1972B4A04C3B57 /* Pods-MathPal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MathPal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MathPal/Pods-MathPal.debug.xcconfig"; sourceTree = "<group>"; };
+		5986A6A789DC85BB18CA9955 /* Pods-MathPal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MathPal.release.xcconfig"; path = "Pods/Target Support Files/Pods-MathPal/Pods-MathPal.release.xcconfig"; sourceTree = "<group>"; };
+		FD0A072C784811C5CC518E99 /* Pods_MathPal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MathPal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				736F569D9CBCBF8D3B0B224C /* Pods_MathPal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F3833FBA468071B6532AD44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD0A072C784811C5CC518E99 /* Pods_MathPal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		32FA49B71F1122B500707DDC = {
 			isa = PBXGroup;
 			children = (
 				32FA49C21F1122B500707DDC /* MathPal */,
 				32FA49C11F1122B500707DDC /* Products */,
+				5A4813FBFF82C39D325B49C9 /* Pods */,
+				0F3833FBA468071B6532AD44 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,8 +83,18 @@
 				32385DF61F13DF2B0091DD9D /* Assets.xcassets */,
 				32FA49CC1F1122B500707DDC /* LaunchScreen.storyboard */,
 				32FA49CF1F1122B500707DDC /* Info.plist */,
+				1D3070DB1F24F781006DF95D /* CurrencyConverter.swift */,
 			);
 			path = MathPal;
+			sourceTree = "<group>";
+		};
+		5A4813FBFF82C39D325B49C9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D0DA4083E1972B4A04C3B57 /* Pods-MathPal.debug.xcconfig */,
+				5986A6A789DC85BB18CA9955 /* Pods-MathPal.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 32FA49D21F1122B500707DDC /* Build configuration list for PBXNativeTarget "MathPal" */;
 			buildPhases = (
+				29A7989CA15F7B491F09B2C5 /* [CP] Check Pods Manifest.lock */,
 				32FA49BC1F1122B500707DDC /* Sources */,
 				32FA49BD1F1122B500707DDC /* Frameworks */,
 				32FA49BE1F1122B500707DDC /* Resources */,
+				F6DE1D1813ABED559E5E0326 /* [CP] Embed Pods Frameworks */,
+				EA155BDC92E1C07BB6943000 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -137,12 +167,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		29A7989CA15F7B491F09B2C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EA155BDC92E1C07BB6943000 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MathPal/Pods-MathPal-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6DE1D1813ABED559E5E0326 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MathPal/Pods-MathPal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		32FA49BC1F1122B500707DDC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				32FA49C61F1122B500707DDC /* ViewController.swift in Sources */,
+				1D3070DC1F24F781006DF95D /* CurrencyConverter.swift in Sources */,
 				32FA49C41F1122B500707DDC /* AppDelegate.swift in Sources */,
 				32385DF51F13D4550091DD9D /* Trigonometry.swift in Sources */,
 				3285E9101F18CFE100A1E0F9 /* Functions.swift in Sources */,
@@ -266,6 +345,7 @@
 		};
 		32FA49D31F1122B500707DDC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D0DA4083E1972B4A04C3B57 /* Pods-MathPal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MathPal/Info.plist;
@@ -279,6 +359,7 @@
 		};
 		32FA49D41F1122B500707DDC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5986A6A789DC85BB18CA9955 /* Pods-MathPal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MathPal/Info.plist;

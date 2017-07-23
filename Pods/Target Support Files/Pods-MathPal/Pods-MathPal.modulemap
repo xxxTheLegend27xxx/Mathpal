@@ -1,0 +1,6 @@
+framework module Pods_MathPal {
+  umbrella header "Pods-MathPal-umbrella.h"
+
+  export *
+  module * { export * }
+}
