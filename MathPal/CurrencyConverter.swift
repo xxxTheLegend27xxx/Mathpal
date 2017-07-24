@@ -48,9 +48,13 @@ class CurrencyConverter: UIViewController {
         dropDownView2.show()
         dropDownView2.selectionAction = { [unowned self] (index, item) in
         self.currencyButton2.setTitle(self.dropDownView2.selectedItem!, for: .normal)
-        if self.dropDownView2.selectedItem != nil{self.selectedCurrency2 = Currency(rawValue: self.dropDownView2.selectedItem!)}
-        
+            if self.dropDownView2.selectedItem != nil{self.selectedCurrency2 = Currency(rawValue: self.dropDownView2.selectedItem!)}
+            if self.currencyJSON != 0 {
+                self.selectedCurrencyValue = self.currencyJSON!["rates"]["\(self.selectedCurrency2!)"].doubleValue
+            }
         }
+        
+        
     }
     
     @IBAction func acButton(_ sender: Any) {
@@ -63,11 +67,20 @@ class CurrencyConverter: UIViewController {
     }
     
     @IBAction func converterButton(_ sender: Any) {
-        let resultDouble = Double(amountField.text!)! * selectedCurrencyValue
-        resultLabel.text = String(resultDouble)
-    }
+        if amountField.text != nil{resultLabel.text = String(Double(amountField.text!)! * selectedCurrencyValue)}
+        
+            }
     
     @IBAction func switchButton(_ sender: Any) {
+        if amountField.text != nil{resultLabel.text = amountField.text}
+        if resultLabel.text != nil{amountField.text = resultLabel.text}
+        if selectedCurrency1 != nil{selectedCurrency2 = selectedCurrency1!}
+        if selectedCurrency2 != nil{selectedCurrency1 = selectedCurrency2!}
+        if selectedCurrency1 != nil{currencyButton2.setTitle(currencyButton1.currentTitle, for: .normal)}
+        if selectedCurrency2 != nil{currencyButton1.setTitle(currencyButton2.currentTitle, for: .normal)}
+
+
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,10 +107,10 @@ class CurrencyConverter: UIViewController {
             response in
             if response.result.isSuccess{
                 print("boi")
-                let currencyJSON = JSON(response.result.value!)
-                self.updateCurrencyData(json: currencyJSON)
+                self.currencyJSON = JSON(response.result.value!)
+                self.updateCurrencyData(json: self.currencyJSON!)
                 
-                print(currencyJSON)
+                
                 
             }
             else{
@@ -150,7 +163,6 @@ class CurrencyConverter: UIViewController {
 
 
 
-        print(baseResult)
     }
 
 
