@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DropDown.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-MathPal.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>30018E0CB0C514A370993936CBBC99D0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5AF94BAA6057F988E96D46F1AFA970CE</key>
+		<key>5168099F2EBFC99A707C03C9EADE01A5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B65EF222BA26B970E084CF02F14CBC7C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FD4E7F2D98BA01EC4C959A7DBDAD9A3F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

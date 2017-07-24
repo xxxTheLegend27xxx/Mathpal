@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D3070DC1F24F781006DF95D /* CurrencyConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3070DB1F24F781006DF95D /* CurrencyConverter.swift */; };
+		1D8D48471F2507F900EB6BF7 /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8D48461F2507F900EB6BF7 /* CurrencyModel.swift */; };
 		32385DF51F13D4550091DD9D /* Trigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32385DF41F13D4550091DD9D /* Trigonometry.swift */; };
 		32385DF71F13DF2B0091DD9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32385DF61F13DF2B0091DD9D /* Assets.xcassets */; };
 		32385DFC1F13E25A0091DD9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32385DFA1F13E25A0091DD9D /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		1D3070DB1F24F781006DF95D /* CurrencyConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyConverter.swift; sourceTree = "<group>"; };
+		1D8D48461F2507F900EB6BF7 /* CurrencyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
 		32385DF41F13D4550091DD9D /* Trigonometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trigonometry.swift; sourceTree = "<group>"; };
 		32385DF61F13DF2B0091DD9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32385DFB1F13E25A0091DD9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +56,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1D8D48481F250C9B00EB6BF7 /* CurrencyConverter */ = {
+			isa = PBXGroup;
+			children = (
+				1D8D48461F2507F900EB6BF7 /* CurrencyModel.swift */,
+				1D3070DB1F24F781006DF95D /* CurrencyConverter.swift */,
+			);
+			name = CurrencyConverter;
+			sourceTree = "<group>";
+		};
 		32FA49B71F1122B500707DDC = {
 			isa = PBXGroup;
 			children = (
@@ -79,11 +90,11 @@
 				32FA49C51F1122B500707DDC /* ViewController.swift */,
 				32385DF41F13D4550091DD9D /* Trigonometry.swift */,
 				3285E90F1F18CFE100A1E0F9 /* Functions.swift */,
+				1D8D48481F250C9B00EB6BF7 /* CurrencyConverter */,
 				32385DFA1F13E25A0091DD9D /* Main.storyboard */,
 				32385DF61F13DF2B0091DD9D /* Assets.xcassets */,
 				32FA49CC1F1122B500707DDC /* LaunchScreen.storyboard */,
 				32FA49CF1F1122B500707DDC /* Info.plist */,
-				1D3070DB1F24F781006DF95D /* CurrencyConverter.swift */,
 			);
 			path = MathPal;
 			sourceTree = "<group>";
@@ -132,6 +143,7 @@
 				TargetAttributes = {
 					32FA49BF1F1122B500707DDC = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = ZA5RJQ95A4;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -222,6 +234,7 @@
 			files = (
 				32FA49C61F1122B500707DDC /* ViewController.swift in Sources */,
 				1D3070DC1F24F781006DF95D /* CurrencyConverter.swift in Sources */,
+				1D8D48471F2507F900EB6BF7 /* CurrencyModel.swift in Sources */,
 				32FA49C41F1122B500707DDC /* AppDelegate.swift in Sources */,
 				32385DF51F13D4550091DD9D /* Trigonometry.swift in Sources */,
 				3285E9101F18CFE100A1E0F9 /* Functions.swift in Sources */,
@@ -348,6 +361,7 @@
 			baseConfigurationReference = 4D0DA4083E1972B4A04C3B57 /* Pods-MathPal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZA5RJQ95A4;
 				INFOPLIST_FILE = MathPal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SchoolWorkStudios.MathPal;
@@ -362,6 +376,7 @@
 			baseConfigurationReference = 5986A6A789DC85BB18CA9955 /* Pods-MathPal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZA5RJQ95A4;
 				INFOPLIST_FILE = MathPal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SchoolWorkStudios.MathPal;

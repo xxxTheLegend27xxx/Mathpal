@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="q8f-Xx-93e">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="CLo-DA-Xld">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -496,43 +496,112 @@
             </objects>
             <point key="canvasLocation" x="85.599999999999994" y="134.48275862068968"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="YvZ-MR-cWp">
+        <!--Currency Converter-->
+        <scene sceneID="lPT-pQ-6cF">
             <objects>
-                <viewController id="q8f-Xx-93e" sceneMemberID="viewController">
+                <viewController id="CLo-DA-Xld" customClass="CurrencyConverter" customModule="MathPal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="E5N-Sh-piG"/>
-                        <viewControllerLayoutGuide type="bottom" id="BiN-xo-OLe"/>
+                        <viewControllerLayoutGuide type="top" id="uEU-rr-2CV"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zvc-3L-X5U"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4dh-xQ-xH1">
+                    <view key="view" contentMode="scaleToFill" id="YyC-OI-EAY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIU-GP-7Df">
-                                <rect key="frame" x="164" y="173" width="46" height="30"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vcF-U1-Xlz">
+                                <rect key="frame" x="214" y="95" width="145" height="324"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAI-PE-UrC">
-                                <rect key="frame" x="164" y="211" width="46" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azq-CD-6Fk">
+                                        <rect key="frame" x="0.0" y="0.0" width="145" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.99968796969999996" green="0.64601641889999994" blue="0.16425412889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Select Currency">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="currency2:" destination="CLo-DA-Xld" eventType="touchUpInside" id="vti-7e-yKQ"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfB-XF-1LY">
+                                        <rect key="frame" x="0.0" y="78" width="145" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzG-fk-4qA">
+                                        <rect key="frame" x="0.0" y="116" width="145" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.99968796969999996" green="0.64601641889999994" blue="0.16425412889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Convert">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="converterButton:" destination="CLo-DA-Xld" eventType="touchUpInside" id="vfC-59-TP7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eHW-hK-FbI">
+                                <rect key="frame" x="16" y="95" width="145" height="324"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7b-FX-1ef">
+                                        <rect key="frame" x="0.0" y="0.0" width="145" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.99968796968460083" green="0.64601641893386841" blue="0.16425412893295288" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Select Currency">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="currency1:" destination="CLo-DA-Xld" eventType="touchUpInside" id="mmQ-wF-5Vl"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aQ5-ih-WLf">
+                                        <rect key="frame" x="0.0" y="78" width="145" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9EM-8f-U9J">
+                                        <rect key="frame" x="0.0" y="116" width="145" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.9334033727645874" green="0.92529582977294922" blue="0.93753182888031006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="AC">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="acButton:" destination="CLo-DA-Xld" eventType="touchUpInside" id="WBd-iR-rq3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B37-Pm-X22">
+                                <rect key="frame" x="163" y="109" width="48" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="switch"/>
+                                <connections>
+                                    <action selector="switchButton:" destination="CLo-DA-Xld" eventType="touchUpInside" id="lJD-th-rfX"/>
+                                </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R5h-pq-rr6">
-                                <rect key="frame" x="-44" y="118" width="213" height="161"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hvt-9q-KPL">
-                                <rect key="frame" x="182" y="309" width="255" height="142"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
+                    <connections>
+                        <outlet property="amountField" destination="aQ5-ih-WLf" id="YXa-KW-0Lq"/>
+                        <outlet property="currencyButton1" destination="E7b-FX-1ef" id="kVE-3V-hBD"/>
+                        <outlet property="currencyButton2" destination="azq-CD-6Fk" id="qL4-jc-qeF"/>
+                        <outlet property="dropView" destination="eHW-hK-FbI" id="5HX-ir-T1q"/>
+                        <outlet property="dropView2" destination="vcF-U1-Xlz" id="xz8-su-8sQ"/>
+                        <outlet property="resultLabel" destination="bfB-XF-1LY" id="cMl-3U-602"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fpn-Bg-9IP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Raz-eQ-Khu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="82.400000000000006" y="781.25937031484261"/>
+            <point key="canvasLocation" x="104.8" y="801.94902548725645"/>
         </scene>
         <!--Trigonometry-->
         <scene sceneID="3aG-su-47m">
@@ -956,6 +1025,7 @@
         <image name="Equalerital triange" width="500" height="433"/>
         <image name="burger Menu W32'" width="32" height="32"/>
         <image name="perpandicular triangle 500x-1" width="500" height="500"/>
+        <image name="switch" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="FTT-bS-LZ4"/>
