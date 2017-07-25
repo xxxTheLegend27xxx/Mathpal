@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="CLo-DA-Xld">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -54,7 +54,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWm-xs-3az">
-                                        <rect key="frame" x="0.0" y="296" width="93" height="97.5"/>
+                                        <rect key="frame" x="0.0" y="295.5" width="93" height="98"/>
                                         <color key="backgroundColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="1">
@@ -68,7 +68,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXJ-75-Tpw">
-                                        <rect key="frame" x="94" y="296" width="93" height="97.5"/>
+                                        <rect key="frame" x="94" y="295.5" width="93" height="98"/>
                                         <color key="backgroundColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="2">
@@ -82,7 +82,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wc2-wb-oKj">
-                                        <rect key="frame" x="188" y="296" width="93" height="97.5"/>
+                                        <rect key="frame" x="188" y="295.5" width="93" height="98"/>
                                         <color key="backgroundColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="3">
@@ -96,7 +96,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhV-Hm-RiP">
-                                        <rect key="frame" x="282" y="296" width="93" height="97.5"/>
+                                        <rect key="frame" x="282" y="295.5" width="93" height="98"/>
                                         <color key="backgroundColor" red="1" green="0.61470841350000005" blue="0.069256289030000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="+">
@@ -110,7 +110,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drY-9s-rF4">
-                                        <rect key="frame" x="0.0" y="197.5" width="93" height="97.5"/>
+                                        <rect key="frame" x="0.0" y="197" width="93" height="97.5"/>
                                         <color key="backgroundColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="4">
@@ -124,7 +124,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pz6-mc-YoX">
-                                        <rect key="frame" x="94" y="197.5" width="93" height="97.5"/>
+                                        <rect key="frame" x="94" y="197" width="93" height="97.5"/>
                                         <color key="backgroundColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="5">
@@ -138,7 +138,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fN6-0H-8s9">
-                                        <rect key="frame" x="188" y="197.5" width="93" height="97.5"/>
+                                        <rect key="frame" x="188" y="197" width="93" height="97.5"/>
                                         <color key="backgroundColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="6">
@@ -152,7 +152,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="560-g6-4Ha">
-                                        <rect key="frame" x="282" y="197.5" width="93" height="97.5"/>
+                                        <rect key="frame" x="282" y="197" width="93" height="97.5"/>
                                         <color key="backgroundColor" red="1" green="0.61470841350000005" blue="0.069256289030000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="-">
@@ -166,7 +166,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIh-gw-3wS">
-                                        <rect key="frame" x="0.0" y="99" width="93" height="97.5"/>
+                                        <rect key="frame" x="0.0" y="98.5" width="93" height="97.5"/>
                                         <color key="backgroundColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="7">
@@ -180,7 +180,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahH-cr-ptq">
-                                        <rect key="frame" x="94" y="99" width="93" height="97.5"/>
+                                        <rect key="frame" x="94" y="98.5" width="93" height="97.5"/>
                                         <color key="backgroundColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="8">
@@ -194,7 +194,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Vn-NU-8kR">
-                                        <rect key="frame" x="282" y="99" width="93" height="97.5"/>
+                                        <rect key="frame" x="282" y="98.5" width="93" height="97.5"/>
                                         <color key="backgroundColor" red="1" green="0.61470841350000005" blue="0.069256289030000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="x">
@@ -208,7 +208,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="han-8g-qXb">
-                                        <rect key="frame" x="0.0" y="0.0" width="93" height="98"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="93" height="97.5"/>
                                         <color key="backgroundColor" red="0.93112606320000002" green="0.92635105770000004" blue="0.93590106870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="AC">
@@ -222,7 +222,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEK-bA-K1R">
-                                        <rect key="frame" x="94" y="0.0" width="93" height="98"/>
+                                        <rect key="frame" x="94" y="0.0" width="93" height="97.5"/>
                                         <color key="backgroundColor" red="0.93112606320000002" green="0.92635105770000004" blue="0.93590106870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="±">
@@ -236,7 +236,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEQ-zW-TCM">
-                                        <rect key="frame" x="188" y="0.0" width="93" height="98"/>
+                                        <rect key="frame" x="188" y="0.0" width="93" height="97.5"/>
                                         <color key="backgroundColor" red="0.93112606320000002" green="0.92635105770000004" blue="0.93590106870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="%">
@@ -250,7 +250,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G30-At-9jc">
-                                        <rect key="frame" x="282" y="0.0" width="93" height="98"/>
+                                        <rect key="frame" x="282" y="0.0" width="93" height="97.5"/>
                                         <color key="backgroundColor" red="1" green="0.61470841350000005" blue="0.069256289030000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="÷">
@@ -264,7 +264,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRG-cw-MOA">
-                                        <rect key="frame" x="188" y="99" width="93" height="97.5"/>
+                                        <rect key="frame" x="188" y="98.5" width="93" height="97.5"/>
                                         <color key="backgroundColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="9">
@@ -408,29 +408,48 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUn-Sa-yho">
                                         <rect key="frame" x="61" y="84" width="154" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Calculator">
                                             <color key="titleColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="Calculator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ryR-rN-lVl"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtZ-wh-6lz">
                                         <rect key="frame" x="61" y="131" width="154" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Trigonometry">
                                             <color key="titleColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
                                             <action selector="Trigonometry:" destination="eQQ-he-XZK" eventType="touchUpInside" id="t3I-0A-FT1"/>
+                                            <segue destination="eQQ-he-XZK" kind="show" id="3a3-Qe-C7V"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaU-Q1-0fV">
                                         <rect key="frame" x="61" y="171" width="166" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Functions">
                                             <color key="titleColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="AEn-FF-uLg" kind="show" id="zSw-05-2q1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZl-LW-gM4">
+                                        <rect key="frame" x="61" y="211" width="166" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Currency Converter">
+                                            <color key="titleColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="currencyConverter:" destination="CLo-DA-Xld" eventType="touchUpInside" id="0R0-Td-6cJ"/>
+                                            <segue destination="CLo-DA-Xld" kind="show" id="Ffk-Tw-cT6"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1153008767" green="0.11470959009999999" blue="0.1158921632" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -445,7 +464,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="burger Menu W32'"/>
                                 <connections>
-                                    <action selector="SlideInMenuTrigger:" destination="eQQ-he-XZK" eventType="touchUpInside" id="50X-aw-IB6"/>
+                                    <action selector="SlideInMenuTrigger:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H0U-X8-Lzj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -478,6 +497,7 @@
                         <outlet property="MenuView" destination="8g3-FB-ory" id="AcU-nw-veH"/>
                         <outlet property="SB" destination="560-g6-4Ha" id="OnF-XF-cjV"/>
                         <outlet property="SlideInMenuButton" destination="Exu-5y-Yba" id="7GC-8f-8Ms"/>
+                        <outlet property="SlideInMenuConstraint" destination="7wr-cA-m34" id="atu-vY-EHG"/>
                         <outlet property="Solution" destination="mKR-9t-dPl" id="a6l-dv-xea"/>
                     </connections>
                 </viewController>
@@ -519,17 +539,23 @@
                                         <state key="normal" title="Select Currency">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        </variation>
                                         <connections>
                                             <action selector="currency2:" destination="CLo-DA-Xld" eventType="touchUpInside" id="vti-7e-yKQ"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfB-XF-1LY">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfB-XF-1LY">
                                         <rect key="frame" x="0.0" y="78" width="145" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzG-fk-4qA">
                                         <rect key="frame" x="0.0" y="116" width="145" height="70"/>
@@ -538,6 +564,9 @@
                                         <state key="normal" title="Convert">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        </variation>
                                         <connections>
                                             <action selector="converterButton:" destination="CLo-DA-Xld" eventType="touchUpInside" id="vfC-59-TP7"/>
                                         </connections>
@@ -555,6 +584,9 @@
                                         <state key="normal" title="Select Currency">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        </variation>
                                         <connections>
                                             <action selector="currency1:" destination="CLo-DA-Xld" eventType="touchUpInside" id="mmQ-wF-5Vl"/>
                                         </connections>
@@ -565,6 +597,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        </variation>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9EM-8f-U9J">
                                         <rect key="frame" x="0.0" y="116" width="145" height="70"/>
@@ -573,6 +608,9 @@
                                         <state key="normal" title="AC">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        </variation>
                                         <connections>
                                             <action selector="acButton:" destination="CLo-DA-Xld" eventType="touchUpInside" id="WBd-iR-rq3"/>
                                         </connections>
@@ -580,17 +618,95 @@
                                 </subviews>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B37-Pm-X22">
-                                <rect key="frame" x="163" y="109" width="48" height="43"/>
+                                <rect key="frame" x="163.5" y="109" width="48" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="switch"/>
                                 <connections>
                                     <action selector="switchButton:" destination="CLo-DA-Xld" eventType="touchUpInside" id="lJD-th-rfX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBR-84-bhX">
+                                <rect key="frame" x="0.0" y="0.0" width="53" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="burger Menu W32'"/>
+                                <connections>
+                                    <action selector="SlideInMenuTrigger:" destination="CLo-DA-Xld" eventType="touchUpInside" id="gK5-9C-UPO"/>
+                                </connections>
+                            </button>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pz6-O3-hy7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JRP-ot-DLg">
+                                <rect key="frame" x="0.0" y="165" width="375" height="502"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view alpha="0.85000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gx4-Gj-hwO">
+                                <rect key="frame" x="-215" y="0.0" width="215" height="672"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgb-WK-3wV">
+                                        <rect key="frame" x="61" y="84" width="154" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Calculator">
+                                            <color key="titleColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="Ld7-Kp-zFk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpN-pr-p9T">
+                                        <rect key="frame" x="61" y="131" width="154" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Trigonometry">
+                                            <color key="titleColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="eQQ-he-XZK" kind="show" id="fh9-pO-M7x"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsf-Q8-P2m">
+                                        <rect key="frame" x="61" y="171" width="166" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Functions">
+                                            <color key="titleColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="AEn-FF-uLg" kind="show" id="ZDy-jt-toC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBw-tt-Ikq">
+                                        <rect key="frame" x="61" y="211" width="166" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Currency Converter">
+                                            <color key="titleColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="currencyConverter:" destination="CLo-DA-Xld" eventType="touchUpInside" id="tQv-5b-Rmf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1153008767" green="0.11470959009999999" blue="0.1158921632" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="215" id="3sX-yh-ziw"/>
+                                    <constraint firstAttribute="width" secondItem="gx4-Gj-hwO" secondAttribute="height" multiplier="215:672" id="uEK-lb-xlK"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="gx4-Gj-hwO" firstAttribute="top" secondItem="YyC-OI-EAY" secondAttribute="top" id="eub-Mq-02e"/>
+                            <constraint firstItem="gx4-Gj-hwO" firstAttribute="leading" secondItem="YyC-OI-EAY" secondAttribute="leading" constant="-215" id="pRZ-iI-sx1"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="MenuView" destination="gx4-Gj-hwO" id="qEv-tl-vRG"/>
+                        <outlet property="SlideInMenuButton" destination="DBR-84-bhX" id="sXE-f2-GQd"/>
+                        <outlet property="SlideInMenuConstraint" destination="pRZ-iI-sx1" id="bCj-QK-WDq"/>
                         <outlet property="amountField" destination="aQ5-ih-WLf" id="YXa-KW-0Lq"/>
                         <outlet property="currencyButton1" destination="E7b-FX-1ef" id="kVE-3V-hBD"/>
                         <outlet property="currencyButton2" destination="azq-CD-6Fk" id="qL4-jc-qeF"/>
@@ -600,6 +716,17 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Raz-eQ-Khu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="aOg-Gg-xsC">
+                    <connections>
+                        <action selector="SlideInMenuSwipeOut:" destination="CLo-DA-Xld" id="ZCV-0Y-1cq"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="RbD-Mx-hP6">
+                    <rectEdge key="edges" left="YES"/>
+                    <connections>
+                        <action selector="SlideInMenuSwipeIn:" destination="CLo-DA-Xld" id="Crh-c0-cBt"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="104.8" y="801.94902548725645"/>
         </scene>
@@ -615,11 +742,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="perpandicular triangle 500x-1" translatesAutoresizingMaskIntoConstraints="NO" id="83f-oe-yd5">
-                                <rect key="frame" x="37" y="89" width="300" height="300"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WLw-eO-tVa">
+                                <rect key="frame" x="37" y="89" width="500" height="500"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </imageView>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="perpandicular triangle 500x-1" translatesAutoresizingMaskIntoConstraints="NO" id="83f-oe-yd5">
+                                        <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
+                                        <color key="tintColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V5t-bF-Orn">
                                 <rect key="frame" x="139" y="366" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -754,7 +886,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLr-mt-8F8">
                                         <rect key="frame" x="61" y="84" width="154" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Calculator">
                                             <color key="titleColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -765,7 +897,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYj-Wb-bF8">
                                         <rect key="frame" x="61" y="131" width="154" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Trigonometry">
                                             <color key="titleColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -776,7 +908,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44Y-q2-zI6">
                                         <rect key="frame" x="61" y="171" width="166" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Functions">
                                             <color key="titleColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -784,12 +916,24 @@
                                             <segue destination="AEn-FF-uLg" kind="show" id="dt3-Gl-qxc"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTM-hm-f6e">
+                                        <rect key="frame" x="61" y="211" width="166" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Currency Converter">
+                                            <color key="titleColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="currencyConverter:" destination="CLo-DA-Xld" eventType="touchUpInside" id="Xuc-oP-ZL1"/>
+                                            <segue destination="CLo-DA-Xld" kind="show" id="CRY-5v-SjO"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1153008767" green="0.11470959009999999" blue="0.1158921632" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="SVB-BY-APX" secondAttribute="height" multiplier="215:672" id="Cmn-NI-LFP"/>
-                                    <constraint firstAttribute="width" constant="215" id="olo-v7-XcJ"/>
+                                    <constraint firstAttribute="width" secondItem="SVB-BY-APX" secondAttribute="height" multiplier="215:672" id="8jX-GA-pYT"/>
+                                    <constraint firstAttribute="width" constant="215" id="elG-uh-kWf"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eie-jd-Jon">
@@ -804,8 +948,8 @@
                         <color key="backgroundColor" red="0.1153008767" green="0.11470959009999999" blue="0.1158921632" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="SVB-BY-APX" firstAttribute="top" secondItem="boT-s3-5n1" secondAttribute="top" id="jNv-Vt-Ztf"/>
-                            <constraint firstItem="SVB-BY-APX" firstAttribute="leading" secondItem="boT-s3-5n1" secondAttribute="leading" constant="-215" id="uAU-YT-ttu"/>
+                            <constraint firstItem="SVB-BY-APX" firstAttribute="top" secondItem="boT-s3-5n1" secondAttribute="top" id="3n9-FW-HR1"/>
+                            <constraint firstItem="SVB-BY-APX" firstAttribute="leading" secondItem="boT-s3-5n1" secondAttribute="leading" constant="-215" id="hu6-r7-x0D"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Jab-y3-4q5" appends="YES" id="892-py-8ay"/>
@@ -829,7 +973,7 @@
                         <outlet property="MenuView" destination="SVB-BY-APX" id="dTG-e5-tHQ"/>
                         <outlet property="Perpandicular" destination="83f-oe-yd5" id="pHt-3q-l21"/>
                         <outlet property="SlideInMenuButton" destination="eie-jd-Jon" id="sM1-sx-Duu"/>
-                        <outlet property="SlideInMenuConstraint" destination="uAU-YT-ttu" id="Dz7-Qn-W5Z"/>
+                        <outlet property="SlideInMenuConstraint" destination="hu6-r7-x0D" id="ssT-su-0GS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D5k-FK-xNP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -865,7 +1009,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ri1-DE-yml">
                                         <rect key="frame" x="61" y="84" width="154" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Calculator">
                                             <color key="titleColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -876,7 +1020,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgA-BZ-X6c">
                                         <rect key="frame" x="61" y="131" width="154" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Trigonometry">
                                             <color key="titleColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -887,12 +1031,24 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MxB-X6-qoV">
                                         <rect key="frame" x="61" y="171" width="158" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Functions">
                                             <color key="titleColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
                                             <action selector="Functions:" destination="AEn-FF-uLg" eventType="touchUpInside" id="DLk-kc-6VI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PbN-c8-pZ8">
+                                        <rect key="frame" x="61" y="211" width="166" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Currency Converter">
+                                            <color key="titleColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="currencyConverter:" destination="CLo-DA-Xld" eventType="touchUpInside" id="0eG-at-CR8"/>
+                                            <segue destination="CLo-DA-Xld" kind="show" id="Mv1-z1-sVN"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1028,6 +1184,9 @@
         <image name="switch" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="CRY-5v-SjO"/>
+        <segue reference="tJZ-cz-pME"/>
+        <segue reference="dt3-Gl-qxc"/>
         <segue reference="FTT-bS-LZ4"/>
     </inferredMetricsTieBreakers>
 </document>

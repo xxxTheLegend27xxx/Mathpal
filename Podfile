@@ -9,6 +9,7 @@ target 'MathPal' do
     pod 'SwiftyJSON'
     pod 'Alamofire'
     pod 'DropDown'
+    pod 'SlideMenuControllerSwift'
 
 
 end

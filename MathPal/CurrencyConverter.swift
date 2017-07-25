@@ -10,10 +10,98 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import DropDown
+import SlideMenuControllerSwift
 
 
 class CurrencyConverter: UIViewController {
 
+    var SlideInMenu = false
+    @IBOutlet weak var SlideInMenuButton: UIButton!
+    @IBOutlet weak var MenuView: UIView!
+    @IBOutlet weak var SlideInMenuConstraint: NSLayoutConstraint!
+    
+    @IBAction func currencyConverter(_ sender: UIButton) {SlideInMenuConstraint.constant = -215
+        MenuView.layer.shadowOpacity = 0
+        UIView.animate(withDuration: 0.2,
+                       animations: {
+                        self.view.layoutIfNeeded()
+        })
+        UIView.animate(withDuration: 0.2,
+                       animations: {
+                        self.SlideInMenuButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi * 0)
+        })
+        SlideInMenu = false
+    }
+    func SlideIn(Test: Bool){
+        if SlideInMenu == true{
+            SlideInMenuConstraint.constant = -215
+            MenuView.layer.shadowOpacity = 0
+            UIView.animate(withDuration: 0.2,
+                           animations: {
+                            self.view.layoutIfNeeded()
+            })
+            UIView.animate(withDuration: 0.2,
+                           animations: {
+                            self.SlideInMenuButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi * 0)
+            })
+        }
+        else {
+            SlideInMenuConstraint.constant = 0
+            MenuView.layer.shadowOpacity = 1
+            MenuView.layer.shadowRadius = 6
+            UIView.animate(withDuration: 0.2,
+                           animations: {
+                            self.view.layoutIfNeeded()
+            })
+            UIView.animate(withDuration: 0.2,
+                           animations: {
+                            self.SlideInMenuButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi / -2)
+            })
+        }
+        SlideInMenu = !SlideInMenu}
+    
+    @IBAction func SlideInMenuTrigger(_ sender: UIButton) {
+        SlideIn(Test: SlideInMenu)
+    }
+    
+    @IBAction func SlideInMenuSwipeIn(_ sender: UIScreenEdgePanGestureRecognizer) {
+        
+        if SlideInMenu == false{
+            SlideInMenuConstraint.constant = 0
+            MenuView.layer.shadowOpacity = 1
+            MenuView.layer.shadowRadius = 6
+            UIView.animate(withDuration: 0.2,
+                           animations: {
+                            self.view.layoutIfNeeded()
+            })
+            UIView.animate(withDuration: 0.2,
+                           animations: {
+                            self.SlideInMenuButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi / -2)
+            })
+            SlideInMenu = true
+        }}
+    
+    @IBAction func SlideInMenuSwipeOut(_ sender: UISwipeGestureRecognizer) {if SlideInMenu == true{
+        SlideInMenuConstraint.constant = -215
+        MenuView.layer.shadowOpacity = 0
+        MenuView.layer.shadowRadius = 6
+        UIView.animate(withDuration: 0.2,
+                       animations: {
+                        self.view.layoutIfNeeded()
+        })
+        UIView.animate(withDuration: 0.2,
+                       animations: {
+                        self.SlideInMenuButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi * 0)
+        })
+        SlideInMenu = false
+        }}
+
+    
+    
+    
+    
+    
+    
     var URL : String = ""
     let currencyModel = CurrencyModel()
     let dropDownView = DropDown()
@@ -62,22 +150,34 @@ class CurrencyConverter: UIViewController {
         currencyButton2.setTitle("Select Currency", for: .normal)
         amountField.text = ""
         resultLabel.text = ""
+        selectedCurrencyValue = 0
         
 
     }
     
     @IBAction func converterButton(_ sender: Any) {
-        if amountField.text != nil{resultLabel.text = String(Double(amountField.text!)! * selectedCurrencyValue)}
+        if amountField.text != nil && selectedCurrencyValue != 0{resultLabel.text = String(Double(amountField.text!)! * selectedCurrencyValue)}
         
             }
     
     @IBAction func switchButton(_ sender: Any) {
+        var tempResultLabel : String = ""
+        var tempSelectedCurrency2 : Currency?
+        var tempCurrencyButton2 : String?
+
+        
+        if resultLabel.text != nil{tempResultLabel = resultLabel.text!}
+
         if amountField.text != nil{resultLabel.text = amountField.text}
-        if resultLabel.text != nil{amountField.text = resultLabel.text}
+        if resultLabel.text != nil{amountField.text = tempResultLabel}
+
+        if selectedCurrency1 != nil{tempSelectedCurrency2 = selectedCurrency2!}
+
         if selectedCurrency1 != nil{selectedCurrency2 = selectedCurrency1!}
-        if selectedCurrency2 != nil{selectedCurrency1 = selectedCurrency2!}
+        if selectedCurrency2 != nil{selectedCurrency1 = tempSelectedCurrency2!}
+        if selectedCurrency1 != nil{tempCurrencyButton2 = currencyButton2.currentTitle}
         if selectedCurrency1 != nil{currencyButton2.setTitle(currencyButton1.currentTitle, for: .normal)}
-        if selectedCurrency2 != nil{currencyButton1.setTitle(currencyButton2.currentTitle, for: .normal)}
+        if selectedCurrency2 != nil{currencyButton1.setTitle(tempCurrencyButton2!, for: .normal)}
 
 
         
