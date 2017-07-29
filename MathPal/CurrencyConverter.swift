@@ -11,10 +11,17 @@ import Alamofire
 import SwiftyJSON
 import DropDown
 import SlideMenuControllerSwift
+import BEMSimpleLineGraph
 
 
-class CurrencyConverter: UIViewController {
+class CurrencyConverter: UIViewController, BEMSimpleLineGraphDelegate, BEMSimpleLineGraphDataSource{
 
+    
+    
+    
+    
+    
+    
     var SlideInMenu = false
     @IBOutlet weak var SlideInMenuButton: UIButton!
     @IBOutlet weak var MenuView: UIView!
@@ -182,18 +189,7 @@ class CurrencyConverter: UIViewController {
 
         
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        dropDownView.anchorView = dropView!
-        dropDownView.dataSource = currencyModel.currencyArray
-        dropDownView2.anchorView = dropView2!
-        dropDownView2.dataSource = currencyModel.currencyArray
-        // Do any additional setup after loading the view.
-        if selectedCurrency1?.rawValue != nil{ URL = "http://api.fixer.io/latest?base=\(selectedCurrency1!.rawValue)"}
-        resultLabel.layer.cornerRadius = 5.0
-
-    }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -222,8 +218,49 @@ class CurrencyConverter: UIViewController {
     
     
     
+    @IBOutlet weak var dataCurrencyLabel: UILabel!
+    func lineGraph(_ graph: BEMSimpleLineGraphView, valueForPointAt index: Int) -> CGFloat {
+        let data = [1.0,2.0,3.0,2.0,0.0]
+        return CGFloat(data[index] + 1)
+    }
+    
+    func numberOfPoints(inLineGraph graph: BEMSimpleLineGraphView) -> Int {
+        return 5
+    }
+    func lineGraph(_ graph: BEMSimpleLineGraphView, labelOnXAxisFor index: Int) -> String? {
+        let label : String = String(index)
+        return label
+    }
     
     
+    
+    @IBOutlet weak var currencyGraph: BEMSimpleLineGraphView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        dropDownView.anchorView = dropView!
+        dropDownView.dataSource = currencyModel.currencyArray
+        dropDownView2.anchorView = dropView2!
+        dropDownView2.dataSource = currencyModel.currencyArray
+        // Do any additional setup after loading the view.
+        if selectedCurrency1?.rawValue != nil{ URL = "http://api.fixer.io/latest?base=\(selectedCurrency1!.rawValue)"}
+        resultLabel.layer.cornerRadius = 5.0
+        dataCurrencyLabel.layer.cornerRadius = 5.0
+        let date = Date()
+        let dateComponents = Calendar.current.dateComponents([.month, .day,.year], from: date)
+
+        print(String(describing: dateComponents.year)) // may print: Optional(13)
+        print(String(describing: dateComponents.day)) // may print: Optional(13)
+        print(String(describing: dateComponents.month)) // may print: Optional(13)
+        currencyGraph.enableYAxisLabel = true
+
+        currencyGraph.animationGraphEntranceTime = 0.5
+        currencyGraph.enableReferenceAxisFrame = true
+        currencyGraph.enableReferenceXAxisLines = true
+        currencyGraph.enableReferenceYAxisLines = true
+        
+    }
+
     
     func updateCurrencyData(json : JSON){
         
@@ -260,7 +297,7 @@ class CurrencyConverter: UIViewController {
         currencyModel.HKD = json["rates"]["HKD"].doubleValue
         currencyModel.ZAR = json["rates"]["ZAR"].doubleValue
         currencyModel.CAD = json["rates"]["CAD"].doubleValue
-
+    
 
 
     }

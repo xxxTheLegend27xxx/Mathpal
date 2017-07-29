@@ -381,7 +381,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yBy-f9-QnI" userLabel="TopView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="175"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKR-9t-dPl">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKR-9t-dPl">
                                         <rect key="frame" x="0.0" y="93" width="367" height="82"/>
                                         <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="50"/>
                                         <color key="textColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -516,7 +516,7 @@
             </objects>
             <point key="canvasLocation" x="85.599999999999994" y="134.48275862068968"/>
         </scene>
-        <!--Currency Converter-->
+        <!--Data Source-->
         <scene sceneID="lPT-pQ-6cF">
             <objects>
                 <viewController id="CLo-DA-Xld" customClass="CurrencyConverter" customModule="MathPal" customModuleProvider="target" sceneMemberID="viewController">
@@ -640,6 +640,46 @@
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JRP-ot-DLg">
                                 <rect key="frame" x="0.0" y="165" width="375" height="502"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MkY-hX-lLV" customClass="BEMSimpleLineGraphView">
+                                        <rect key="frame" x="0.0" y="178" width="375" height="324"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="enableBezierCurve" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="widthLine">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="widthReferenceLines">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="alphaLine">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="sizePoint">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="alphaTop">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="alphaBottom">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="CLo-DA-Xld" id="GQ7-uH-paA"/>
+                                            <outlet property="delegate" destination="CLo-DA-Xld" id="q4V-Bt-5ak"/>
+                                        </connections>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HuO-qI-gCL">
+                                        <rect key="frame" x="16" y="126" width="344" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.99968796969999996" green="0.64601641889999994" blue="0.16425412889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                             </view>
                             <view alpha="0.85000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gx4-Gj-hwO">
                                 <rect key="frame" x="-215" y="0.0" width="215" height="672"/>
@@ -710,6 +750,8 @@
                         <outlet property="amountField" destination="aQ5-ih-WLf" id="YXa-KW-0Lq"/>
                         <outlet property="currencyButton1" destination="E7b-FX-1ef" id="kVE-3V-hBD"/>
                         <outlet property="currencyButton2" destination="azq-CD-6Fk" id="qL4-jc-qeF"/>
+                        <outlet property="currencyGraph" destination="MkY-hX-lLV" id="qXI-x6-BMf"/>
+                        <outlet property="dataCurrencyLabel" destination="HuO-qI-gCL" id="P6b-Vj-drM"/>
                         <outlet property="dropView" destination="eHW-hK-FbI" id="5HX-ir-T1q"/>
                         <outlet property="dropView2" destination="vcF-U1-Xlz" id="xz8-su-8sQ"/>
                         <outlet property="resultLabel" destination="bfB-XF-1LY" id="cMl-3U-602"/>
@@ -743,11 +785,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WLw-eO-tVa">
-                                <rect key="frame" x="37" y="89" width="500" height="500"/>
+                                <rect key="frame" x="37" y="89" width="500" height="933"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Equalerital triange" translatesAutoresizingMaskIntoConstraints="NO" id="giU-SU-331">
+                                        <rect key="frame" x="0.0" y="0.0" width="500" height="433"/>
+                                    </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="perpandicular triangle 500x-1" translatesAutoresizingMaskIntoConstraints="NO" id="83f-oe-yd5">
-                                        <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
+                                        <rect key="frame" x="0.0" y="433" width="500" height="500"/>
                                         <color key="tintColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </imageView>
                                 </subviews>
@@ -831,10 +876,6 @@
                                     <action selector="TrigoSwitch:" destination="eQQ-he-XZK" eventType="valueChanged" id="4cc-pR-nIy"/>
                                 </connections>
                             </segmentedControl>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Equalerital triange" translatesAutoresizingMaskIntoConstraints="NO" id="giU-SU-331">
-                                <rect key="frame" x="37" y="118" width="300" height="272"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z9e-gn-2DG">
                                 <rect key="frame" x="139" y="373" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1184,9 +1225,9 @@
         <image name="switch" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CRY-5v-SjO"/>
-        <segue reference="tJZ-cz-pME"/>
-        <segue reference="dt3-Gl-qxc"/>
-        <segue reference="FTT-bS-LZ4"/>
+        <segue reference="Ffk-Tw-cT6"/>
+        <segue reference="Ld7-Kp-zFk"/>
+        <segue reference="fh9-pO-M7x"/>
+        <segue reference="ZDy-jt-toC"/>
     </inferredMetricsTieBreakers>
 </document>

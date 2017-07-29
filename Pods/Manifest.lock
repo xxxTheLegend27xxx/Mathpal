@@ -1,21 +1,24 @@
 PODS:
   - Alamofire (4.5.0)
+  - BEMSimpleLineGraph (4.1)
   - DropDown (2)
   - SlideMenuControllerSwift (3.0.1)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Alamofire
+  - BEMSimpleLineGraph
   - DropDown
   - SlideMenuControllerSwift
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  BEMSimpleLineGraph: 44fd451f27f8e9cf96f2da5bea27603093576dd1
   DropDown: 744784d9c9aa505100e942c16acd05430cbb2f0a
   SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 0236f5b4746c1bf9d3f826f4bcc068275a9a6fe8
+PODFILE CHECKSUM: dff8cde4453f1e44d0fc01a62a90b98ed2c04d13
 
 COCOAPODS: 1.2.1

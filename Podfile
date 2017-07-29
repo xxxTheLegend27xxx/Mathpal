@@ -10,6 +10,7 @@ target 'MathPal' do
     pod 'Alamofire'
     pod 'DropDown'
     pod 'SlideMenuControllerSwift'
+    pod 'BEMSimpleLineGraph'
 
 
 end

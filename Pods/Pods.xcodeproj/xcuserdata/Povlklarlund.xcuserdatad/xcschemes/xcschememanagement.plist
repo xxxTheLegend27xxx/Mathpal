@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>BEMSimpleLineGraph.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>DropDown.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,7 +37,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1D5C7AF4CA4CBD323BF93B47CF9E4696</key>
+		<key>1EB6B0A0ACCD3E95C3EB54A089843CA8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3FE2174A741A063236C74058EFE9F878</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,17 +52,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5FFAE2658A4B60FBBCCD0C77C0F3D371</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7ADD8C2E3147FED83AB475FC14E7D2B3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8A421C6298CB3DF5D749193BD6FD0B38</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AEF9FE315C009C7901C5317E39552FD8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
