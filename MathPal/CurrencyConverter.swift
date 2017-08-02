@@ -20,7 +20,8 @@ class CurrencyConverter: UIViewController, BEMSimpleLineGraphDelegate, BEMSimple
     
     
     
-    
+    @IBOutlet weak var currencyGraph: BEMSimpleLineGraphView!
+
     
     var SlideInMenu = false
     @IBOutlet weak var SlideInMenuButton: UIButton!
@@ -135,16 +136,27 @@ class CurrencyConverter: UIViewController, BEMSimpleLineGraphDelegate, BEMSimple
             if self.dropDownView.selectedItem != nil{self.selectedCurrency1 = Currency(rawValue: self.dropDownView.selectedItem!)}
             self.URL = "http://api.fixer.io/latest?base=\(self.selectedCurrency1!.rawValue)"
             self.getCurrencyData(url: self.URL)
+            self.updateGraphData(timeInterval: 7)
+            
+          
         }
         
+        
+        
+        
+        
+        
+        
     }
+    
+    
     
     @IBAction func currency2(_ sender: UIButton) {
         dropDownView2.show()
         dropDownView2.selectionAction = { [unowned self] (index, item) in
         self.currencyButton2.setTitle(self.dropDownView2.selectedItem!, for: .normal)
             if self.dropDownView2.selectedItem != nil{self.selectedCurrency2 = Currency(rawValue: self.dropDownView2.selectedItem!)}
-            if self.currencyJSON != 0 {
+            if self.currencyJSON != nil {
                 self.selectedCurrencyValue = self.currencyJSON!["rates"]["\(self.selectedCurrency2!)"].doubleValue
             }
         }
@@ -163,6 +175,9 @@ class CurrencyConverter: UIViewController, BEMSimpleLineGraphDelegate, BEMSimple
     }
     
     @IBAction func converterButton(_ sender: Any) {
+        print(self.xAxisData)
+        currencyGraph.reloadGraph()
+        print(xAxisData)
         if amountField.text != nil && selectedCurrencyValue != 0{resultLabel.text = String(Double(amountField.text!)! * selectedCurrencyValue)}
         
             }
@@ -210,32 +225,67 @@ class CurrencyConverter: UIViewController, BEMSimpleLineGraphDelegate, BEMSimple
                 
             }
             else{
-                print("Error \(response.result.error)")
+                print("Error \(String(describing: response.result.error))")
             }
         }
         
     }
     
-    
-    
-    @IBOutlet weak var dataCurrencyLabel: UILabel!
-    func lineGraph(_ graph: BEMSimpleLineGraphView, valueForPointAt index: Int) -> CGFloat {
-        let data = [1.0,2.0,3.0,2.0,0.0]
-        return CGFloat(data[index] + 1)
+    struct Rate {
+        
+        let date : Date
+        var value : Double
     }
     
-    func numberOfPoints(inLineGraph graph: BEMSimpleLineGraphView) -> Int {
-        return 5
+    var historyURL : String = ""
+    var xAxisData : [Double] = [2.0,4.0,1,0,5.0,6.0,4.0,10.0]
+
+    var historicalRates = [Rate]()
+    
+    func updateGraphData(timeInterval: Int){
+        if selectedCurrency1 != nil && selectedCurrency2 != nil { // checking if both currencies have been selected
+            self.xAxisData.removeAll() // removing some default values
+            
+            let calendar = Calendar.current
+            // set the date to noon to avoid daylight saving changes at midnight in a few countries
+            let today = calendar.date(bySettingHour: 12, minute: 0, second: 0, of:  Date())!
+            
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd"
+            
+            for dayOffset in 0...7 {
+                let currentDate = calendar.date(byAdding: .day, value: dayOffset, to: today)!
+                let currentDateAsString = formatter.string(from: currentDate)
+                print(currentDate, currentDateAsString)
+            }
+            let date = Date()
+            let dateComponents = Calendar.current.dateComponents([.month, .day,.year], from: date)
+            
+            for i in 1...timeInterval { // don't know exactly if i'm doing this the optimal way?
+                print("passed")
+                
+                var rate = Rate()
+                 //getting the the year(again, just to see if it's working)
+                historyURL = "http://api.fixer.io/\(dateComponents.year!.description)-03-0\(String(i))?base=\(selectedCurrency1!.rawValue)" //modifying the url to my needs
+                
+                
+                Alamofire.request(historyURL, method: .get).responseJSON { // requesting data
+                    response in
+                    if response.result.isSuccess{
+                        let json = JSON(response.result.value!)
+                        self.xAxisData.append(json["rates"] [self.selectedCurrency2!.rawValue].doubleValue) // using SwiftyJSON btw to convert, but shouldn't this in theory append in the correct order?
+                        print(json["date"].stringValue) // printing out the date
+                        
+                        
+                    }
+                    else{
+                        print("Error \(String(describing: response.result.error))")
+                    }
+                }
+                
+            }
+        }
     }
-    func lineGraph(_ graph: BEMSimpleLineGraphView, labelOnXAxisFor index: Int) -> String? {
-        let label : String = String(index)
-        return label
-    }
-    
-    
-    
-    @IBOutlet weak var currencyGraph: BEMSimpleLineGraphView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         dropDownView.anchorView = dropView!
@@ -245,25 +295,29 @@ class CurrencyConverter: UIViewController, BEMSimpleLineGraphDelegate, BEMSimple
         // Do any additional setup after loading the view.
         if selectedCurrency1?.rawValue != nil{ URL = "http://api.fixer.io/latest?base=\(selectedCurrency1!.rawValue)"}
         resultLabel.layer.cornerRadius = 5.0
-        dataCurrencyLabel.layer.cornerRadius = 5.0
-        let date = Date()
-        let dateComponents = Calendar.current.dateComponents([.month, .day,.year], from: date)
-
-        print(String(describing: dateComponents.year)) // may print: Optional(13)
-        print(String(describing: dateComponents.day)) // may print: Optional(13)
-        print(String(describing: dateComponents.month)) // may print: Optional(13)
+ // may print: Optional(13)
         currencyGraph.enableYAxisLabel = true
-
+    
         currencyGraph.animationGraphEntranceTime = 0.5
         currencyGraph.enableReferenceAxisFrame = true
         currencyGraph.enableReferenceXAxisLines = true
         currencyGraph.enableReferenceYAxisLines = true
+        currencyGraph.formatStringForValues = "%.4f"
         
     }
 
+    func lineGraph(_ graph: BEMSimpleLineGraphView, valueForPointAt index: Int) -> CGFloat {
+        return CGFloat(xAxisData[index])
+    }
     
+    func numberOfPoints(inLineGraph graph: BEMSimpleLineGraphView) -> Int {
+        return xAxisData.count
+    }
+    func lineGraph(_ graph: BEMSimpleLineGraphView, labelOnXAxisFor index: Int) -> String? {
+        let label : String = String(index)
+        return label
+    }
     func updateCurrencyData(json : JSON){
-        
         let baseResult = json["base"].stringValue
         currencyModel.base = baseResult
         currencyModel.CNY = json["rates"]["CNY"].doubleValue
@@ -302,5 +356,5 @@ class CurrencyConverter: UIViewController, BEMSimpleLineGraphDelegate, BEMSimple
 
     }
 
-
+    
 }

@@ -636,20 +636,19 @@
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MkY-hX-lLV" customClass="BEMSimpleLineGraphView">
                                         <rect key="frame" x="0.0" y="178" width="375" height="324"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="enableBezierCurve" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="enableBezierCurve" value="NO"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="widthLine">
-                                                <real key="value" value="3"/>
+                                                <real key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="widthReferenceLines">
-                                                <real key="value" value="3"/>
+                                                <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="alphaLine">
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="sizePoint">
-                                                <real key="value" value="3"/>
+                                                <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="alphaTop">
                                                 <real key="value" value="1"/>
@@ -657,20 +656,14 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="alphaBottom">
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="enableYAxisLabel" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="enableXAxisLabel" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="dataSource" destination="CLo-DA-Xld" id="GQ7-uH-paA"/>
                                             <outlet property="delegate" destination="CLo-DA-Xld" id="q4V-Bt-5ak"/>
                                         </connections>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HuO-qI-gCL">
-                                        <rect key="frame" x="16" y="126" width="344" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.99968796969999996" green="0.64601641889999994" blue="0.16425412889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                             </view>
                             <view alpha="0.85000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gx4-Gj-hwO">
@@ -728,6 +721,15 @@
                                     <constraint firstAttribute="width" secondItem="gx4-Gj-hwO" secondAttribute="height" multiplier="215:672" id="uEK-lb-xlK"/>
                                 </constraints>
                             </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mS9-kt-x45">
+                                <rect key="frame" x="127" y="300" width="121" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="1W"/>
+                                    <segment title="1M"/>
+                                    <segment title="1Y"/>
+                                </segments>
+                            </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBR-84-bhX">
                                 <rect key="frame" x="0.0" y="0.0" width="53" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -751,7 +753,6 @@
                         <outlet property="currencyButton1" destination="E7b-FX-1ef" id="kVE-3V-hBD"/>
                         <outlet property="currencyButton2" destination="azq-CD-6Fk" id="qL4-jc-qeF"/>
                         <outlet property="currencyGraph" destination="MkY-hX-lLV" id="qXI-x6-BMf"/>
-                        <outlet property="dataCurrencyLabel" destination="HuO-qI-gCL" id="P6b-Vj-drM"/>
                         <outlet property="dropView" destination="eHW-hK-FbI" id="5HX-ir-T1q"/>
                         <outlet property="dropView2" destination="vcF-U1-Xlz" id="xz8-su-8sQ"/>
                         <outlet property="resultLabel" destination="bfB-XF-1LY" id="cMl-3U-602"/>
@@ -1225,9 +1226,9 @@
         <image name="switch" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ffk-Tw-cT6"/>
-        <segue reference="FTT-bS-LZ4"/>
-        <segue reference="3a3-Qe-C7V"/>
-        <segue reference="zSw-05-2q1"/>
+        <segue reference="fh9-pO-M7x"/>
+        <segue reference="CRY-5v-SjO"/>
+        <segue reference="ZDy-jt-toC"/>
+        <segue reference="Ld7-Kp-zFk"/>
     </inferredMetricsTieBreakers>
 </document>
