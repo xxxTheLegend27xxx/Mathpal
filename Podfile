@@ -11,6 +11,6 @@ target 'MathPal' do
     pod 'DropDown'
     pod 'SlideMenuControllerSwift'
     pod 'BEMSimpleLineGraph'
-
+    
 
 end

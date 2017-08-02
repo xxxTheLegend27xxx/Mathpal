@@ -114,6 +114,7 @@ class ViewController: UIViewController {
     
     var Calc: Double = 0 // Calculation 1 - tallet der altid vises i Solution.text
     var Calc2: Double = 0 // Calculation 2 - gemmer Calc's værdi til at udfører den ønskede Calculation
+    var Calc3: Double = 0 // bruges til at resultatknappen kan blive ved med at regne
     var K: Double = 10 // variable der ændre værdien af input til at vise et ønsket tal
     var D = false // Division /
     var M = false // Multipikation *
@@ -132,7 +133,7 @@ class ViewController: UIViewController {
     var ActionCheck = false // Bool der checker om en handling er påtaget
     var ResultAction = true // Checker om Result handling er deaktiveret
     let CharacterLength = 9 // max længde a tegn inde i Solution.text
-    
+    var ResultBCheck = false // checker om result knappen er blevet presset
     // bruges til at highlighte handlingsknapperne
     @IBOutlet weak var MB: UIButton! // outlet til  gange
     @IBOutlet weak var DB: UIButton! // outlet til divedere
@@ -165,11 +166,10 @@ class ViewController: UIViewController {
         }
         return Handling
     }
-    
-    
-    @IBAction func N0(_ sender: UIButton) {
-        
-        
+   
+    func Number(NumberValue: Double){
+        if ResultBCheck == true{ResultBFunc()}
+        if NumberValue == 0 {
         ActionCheck = ATest(Handling: ActionCheck)
         SolutionLength = Solution.text!.characters.count
         if SolutionLength <= 3 {ActionCheck = false}
@@ -199,14 +199,14 @@ class ViewController: UIViewController {
                 K = 10
             }
             
-            Calc = Calc * K + (0/V)
+            Calc = Calc * K + (NumberValue/V)
             if Dot == true {
                 if DotStr == true{
                     Solution.text = String(Calc)
                     DotStr = false
                 }
                 else {
-                    Solution.text = Solution.text! + "0"
+                    Solution.text = Solution.text! + String(Int(NumberValue))
                     
                 }
             }
@@ -226,422 +226,175 @@ class ViewController: UIViewController {
             ACB.setTitle("C", for: .normal)
         }
         else{}
-        
+        }
+        if NumberValue != 0{
+            ActionCheck = ATest(Handling: ActionCheck)
+            SolutionLength = Solution.text!.characters.count
+            if SolutionLength <= 3 {ActionCheck = false}
+            if SolutionLength <= CharacterLength || ActionCheck == true && Null == false{
+                
+                Null = true
+                
+                if Percent == true{Calc = 0
+                    PM = false
+                    V = 1
+                    V2 = 1
+                    Percent = false
+                    K = 10
+                    Dot = false
+                    // Dette er hvis man allerede har klikket på procent og derefter klikker videre, så reseter det bare tallet
+                }
+                
+                if Dot == true{
+                    V = V * 10
+                    V2 = V
+                    K = 1
+                    DotStr = false
+                }
+                    //  Dette ændre systemmet vedr. hvordan den tæller op, når man har klikket på punktum knappen/deci
+                else {
+                    V = V2
+                    K = 10
+                }
+                
+                // Det sidste tjekker om tallet har nogen decimaltal, og hvis det ikke har det ændre det værdien fra double til int
+                
+                Calc = Calc * K + (NumberValue/V)
+                if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
+                    Solution.text = String(Int(Calc))
+                }
+                else {
+                    Solution.text = String(Calc)
+                }
+                
+                MB.alpha = 1
+                DB.alpha = 1
+                SB.alpha = 1
+                AB.alpha = 1
+                
+                
+                
+                ACB.setTitle("C", for: .normal)
+
+            }}}
+    func ResultBFunc(){
+        Calc3 = 0
+        Dot = false
+        V = 1
+        V2 = 1
+        D = false
+        M = false
+        S = false
+        A = false
+        PM = false
+        Null = false
+        ActionCheck = true
+        ResultBCheck = false
+        MB.alpha = 1
+        DB.alpha = 1
+        SB.alpha = 1
+        AB.alpha = 1
+        ACB.setTitle("C", for: .normal)}
+    func Action(){
+        if ResultBCheck == true{ResultBFunc()}
+        if Null == true{
+        if D == true {
+            Calc = Calc2/Calc
+            Calc2 = Calc
+            if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
+                Solution.text = String(Int(Calc))
+            }
+            else {
+                Solution.text = String(Calc)
+            }
+        }
+        if M == true {
+            Calc = Calc2*Calc
+            Calc2 = Calc
+            if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
+                Solution.text = String(Int(Calc))
+            }
+            else {
+                Solution.text = String(Calc)
+            }
+        }
+        if S == true {
+            Calc = Calc2-Calc
+            Calc2 = Calc
+            if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
+                Solution.text = String(Int(Calc))
+            }
+            else {
+                Solution.text = String(Calc)
+            }
+        }
+        if A == true{
+            Calc = Calc2+Calc
+            Calc2 = Calc
+            if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
+                Solution.text = String(Int(Calc))
+            }
+            else {
+                Solution.text = String(Calc)
+            }}}}
+    func Action2(){
+        ResultBCheck = false
+        if Calc2 == 0 && ActionCheck == false{
+            Calc2 = Calc
+            Calc = 0
+        }
+        Calc = 0
+        Dot = false
+        V = 1
+        PM = false
+        V2 = 1
+        Null = false
+        ActionCheck = true
+        ACB.setTitle("C", for: .normal)
+}
+    func Action3(){
+        MB.alpha = TestH(H: M)
+        DB.alpha = TestH(H: D)
+        SB.alpha = TestH(H: S)
+        AB.alpha = TestH(H: A)
     }
-    
-    
+
+    @IBAction func N0(_ sender: UIButton) {
+        Number(NumberValue: 0)
+           }
     @IBAction func N1(_ sender: UIButton) {
-        ActionCheck = ATest(Handling: ActionCheck)
-        SolutionLength = Solution.text!.characters.count
-        if SolutionLength <= 3 {ActionCheck = false}
-        if SolutionLength <= CharacterLength || ActionCheck == true && Null == false{
-            
-            Null = true
-            
-            if Percent == true{Calc = 0
-                PM = false
-                V = 1
-                V2 = 1
-                Percent = false
-                K = 10
-                Dot = false
-                // Dette er hvis man allerede har klikket på procent og derefter klikker videre, så reseter det bare tallet
-            }
-            
-            if Dot == true{
-                V = V * 10
-                V2 = V
-                K = 1
-                DotStr = false
-            }
-                //  Dette ændre systemmet vedr. hvordan den tæller op, når man har klikket på punktum knappen/deci
-            else {
-                V = V2
-                K = 10
-            }
-            
-            // Det sidste tjekker om tallet har nogen decimaltal, og hvis det ikke har det ændre det værdien fra double til int
-            
-            Calc = Calc * K + (1/V)
-            if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
-                Solution.text = String(Int(Calc))
-            }
-            else {
-                Solution.text = String(Calc)
-            }
-            
-            MB.alpha = 1
-            DB.alpha = 1
-            SB.alpha = 1
-            AB.alpha = 1
-            
-            
-            
-            ACB.setTitle("C", for: .normal)
-        }
+        Number(NumberValue: 1)
     }
-    
     @IBAction func N2(_ sender: UIButton) {
-        ActionCheck = ATest(Handling:  ActionCheck)
-        SolutionLength = Solution.text!.characters.count
-        if SolutionLength <= 3 {ActionCheck = false}
-        if SolutionLength <= CharacterLength || ActionCheck == true && Null == false{
-            
-            
-            Null = true
-            
-            if Percent == true{Calc = 0
-                PM = false
-                V = 1
-                V2 = 1
-                Percent = false
-                K = 10
-                Dot = false
-            }
-            
-            if Dot == true{
-                V = V * 10
-                V2 = V
-                K = 1
-                DotStr = false
-            }
-            else {
-                V = V2
-                K = 10
-            }
-            
-            Calc = Calc * K + (2/V)
-            if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
-                Solution.text = String(Int(Calc))
-            }
-            else {
-                Solution.text = String(Calc)
-            }
-            
-            MB.alpha = 1
-            DB.alpha = 1
-            SB.alpha = 1
-            AB.alpha = 1
-            ACB.setTitle("C", for: .normal)
-            
-        }
-        else{}
+       Number(NumberValue: 2)
     }
-    
     @IBAction func N3(_ sender: UIButton) {
-        ActionCheck = ATest(Handling:  ActionCheck)
-        SolutionLength = Solution.text!.characters.count
-        if SolutionLength <= CharacterLength || ActionCheck == true && Null == false{
-            
-            Null = true
-            
-            
-            if Percent == true{Calc = 0
-                PM = false
-                V = 1
-                V2 = 1
-                Percent = false
-                K = 10
-                Dot = false
-            }
-            
-            if Dot == true{
-                V = V * 10
-                V2 = V
-                K = 1
-                DotStr = false
-            }
-            else {
-                V = V2
-                K = 10
-            }
-            Calc = Calc * K + (3/V)
-            if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
-                Solution.text = String(Int(Calc))
-            }
-            else {
-                Solution.text = String(Calc)
-            }
-            
-            MB.alpha = 1
-            DB.alpha = 1
-            SB.alpha = 1
-            AB.alpha = 1
-            
-            ACB.setTitle("C", for: .normal)
-            
-        } else{}
+        Number(NumberValue: 3)
     }
-    
     @IBAction func N4(_ sender: UIButton) {
-        ActionCheck = ATest(Handling:  ActionCheck)
-        SolutionLength = Solution.text!.characters.count
-        if SolutionLength <= CharacterLength || ActionCheck == true && Null == false{
-            
-            Null = true
-            
-            if Percent == true{Calc = 0
-                PM = false
-                V = 1
-                V2 = 1
-                Percent = false
-                K = 10
-                Dot = false
-            }
-            if Dot == true{
-                V = V * 10
-                V2 = V
-                K = 1
-                DotStr = false
-            }
-                
-            else {
-                V = V2
-                K = 10
-            }
-            
-            Calc = Calc * K + (4/V)
-            if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
-                Solution.text = String(Int(Calc))
-            }
-            else {
-                Solution.text = String(Calc)
-            }
-            
-            MB.alpha = 1
-            DB.alpha = 1
-            SB.alpha = 1
-            AB.alpha = 1
-            
-            ACB.setTitle("C", for: .normal)
-        }
-        else{}
+       Number(NumberValue: 4)
     }
-    
     @IBAction func N5(_ sender: UIButton) {
-        ActionCheck = ATest(Handling: ActionCheck)
-        SolutionLength = Solution.text!.characters.count
-        if SolutionLength <= CharacterLength || ActionCheck == true && Null == false{
-            
-            Null = true
-            
-            if Percent == true{Calc = 0
-                PM = false
-                V = 1
-                V2 = 1
-                Percent = false
-                K = 10
-                Dot = false
-            }
-            if Dot == true{
-                V = V * 10
-                V2 = V
-                K = 1
-                DotStr = false
-            }
-            else {
-                V = V2
-                K = 10
-            }
-            
-            Calc = Calc * K + (5/V)
-            if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
-                Solution.text = String(Int(Calc))
-            }
-            else {
-                Solution.text = String(Calc)
-            }
-            
-            MB.alpha = 1
-            DB.alpha = 1
-            SB.alpha = 1
-            AB.alpha = 1
-            
-            ACB.setTitle("C", for: .normal)
-            
-        }
-        else{}
+        Number(NumberValue: 5)
     }
-    
     @IBAction func N6(_ sender: UIButton) {
-        ActionCheck = ATest(Handling:  ActionCheck)
-        SolutionLength = Solution.text!.characters.count
-        if SolutionLength <= CharacterLength || ActionCheck == true && Null == false{
-            
-            Null = true
-            if Percent == true{Calc = 0
-                PM = false
-                V = 1
-                V2 = 1
-                Percent = false
-                K = 10
-                Dot = false
-            }
-            
-            if Dot == true{
-                V = V * 10
-                V2 = V
-                K = 1
-                DotStr = false
-            }
-                
-            else {
-                V = V2
-                K = 10
-            }
-            Calc = Calc * K + (6/V)
-            if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
-                Solution.text = String(Int(Calc))
-            }
-            else {
-                Solution.text = String(Calc)
-            }
-            
-            MB.alpha = 1
-            DB.alpha = 1
-            SB.alpha = 1
-            AB.alpha = 1
-            
-            ACB.setTitle("C", for: .normal)
-        } else{}
+       Number(NumberValue: 6)
     }
-    
     @IBAction func N7(_ sender: UIButton) {
-        ActionCheck = ATest(Handling:  ActionCheck)
-        SolutionLength = Solution.text!.characters.count
-        if SolutionLength <= CharacterLength || ActionCheck == true && Null == false{
-            
-            Null = true
-            
-            
-            if Percent == true{Calc = 0
-                PM = false
-                V = 1
-                V2 = 1
-                Percent = false
-                K = 10
-                Dot = false
-            }
-            if Dot == true{
-                V = V * 10
-                V2 = V
-                K = 1
-                DotStr = false
-            }
-            else {
-                V = V2
-                K = 10
-            }
-            Calc = Calc * K + (7/V)
-            if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
-                Solution.text = String(Int(Calc))
-            }
-            else {
-                Solution.text = String(Calc)
-            }
-            
-            MB.alpha = 1
-            DB.alpha = 1
-            SB.alpha = 1
-            AB.alpha = 1
-            
-            ACB.setTitle("C", for: .normal)
-            
-        } else{}
+        Number(NumberValue: 7)
     }
-    
     @IBAction func N8(_ sender: UIButton) {
-        ActionCheck = ATest(Handling:  ActionCheck)
-        SolutionLength = Solution.text!.characters.count
-        if SolutionLength <= CharacterLength || ActionCheck == true && Null == false{
-            
-            Null = true
-            
-            
-            if Percent == true{Calc = 0
-                PM = false
-                V = 1
-                V2 = 1
-                Percent = false
-                K = 10
-                Dot = false
-            }
-            
-            if Dot == true{
-                V = V * 10
-                V2 = V
-                K = 1
-                DotStr = false
-            }
-            else {
-                V = V2
-                
-                K = 10
-            }
-            Calc = Calc * K + (8/V)
-            if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
-                Solution.text = String(Int(Calc))
-            }
-            else {
-                Solution.text = String(Calc)
-            }
-            
-            MB.alpha = 1
-            DB.alpha = 1
-            SB.alpha = 1
-            AB.alpha = 1
-            
-            ACB.setTitle("C", for: .normal)
-        }}
-    
-    @IBAction func N9(_ sender: UIButton) {
-        ActionCheck = ATest(Handling: ActionCheck)
-        SolutionLength = Solution.text!.characters.count
-        if SolutionLength <= CharacterLength || ActionCheck == true && Null == false{
-            
-            
-            Null = true
-            
-            
-            if Percent == true{Calc = 0
-                PM = false
-                V = 1
-                V2 = 1
-                Percent = false
-                K = 10
-                Dot = false
-                
-            }
-            if Dot == true{
-                V = V * 10
-                V2 = V
-                K = 1
-                DotStr = false
-            }
-            else {
-                V = V2
-                K = 10
-            }
-            Calc = Calc * K + (9/V)
-            if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
-                Solution.text = String(Int(Calc))
-            }
-            else {
-                Solution.text = String(Calc)
-            }
-            
-            MB.alpha = 1
-            DB.alpha = 1
-            SB.alpha = 1
-            AB.alpha = 1
-            
-            ACB.setTitle("C", for: .normal)
-        }
+        Number(NumberValue: 8)
     }
-    
+    @IBAction func N9(_ sender: UIButton) {
+        Number(NumberValue: 9)
+    }
     @IBAction func AC(_ sender: UIButton) {
+        if ResultBCheck == true{ResultBFunc()}
         if Calc != 0{
             Calc = 0
+            Calc3 = 0
+            ResultBCheck = false
             Dot = false
             V = 1
             V2 = 1
@@ -653,21 +406,20 @@ class ViewController: UIViewController {
             ACB.setTitle("AC", for: .normal)
         }
         else{
-            
-            
             ACB.setTitle("AC", for: .normal)
-            
-            
             Calc = 0
             Calc2 = 0
-            
-            
+            Calc3 = 0
             if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
                 Solution.text = String(Int(Calc))
             }
             else {
                 Solution.text = String(Calc)
             }
+            ResultAction = false
+            ResultBCheck = false
+            ActionCheck = false
+            
             Null = false
             D = false
             M = false
@@ -680,17 +432,14 @@ class ViewController: UIViewController {
             Percent = false
             DotStr = true
             DotPM = ""
-            
             MB.alpha = 1
             DB.alpha = 1
             SB.alpha = 1
             AB.alpha = 1
-            
         }
-        
     }
     @IBAction func PlusMinus(_ sender: UIButton) {
-        
+        ResultBCheck = false
         if PM == true {
             PM = false
             Calc = Calc * (-1)
@@ -722,6 +471,7 @@ class ViewController: UIViewController {
         
     }
     @IBAction func Percent(_ sender: UIButton) {
+        ResultBCheck = false
         
         Calc = Calc / 100
         if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
@@ -737,9 +487,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func DotB(_ sender: UIButton) {
-        
-        
-        
+        ResultBCheck = false
         if Dot == false{
             Dot = true
             Solution.text = String(Int(Calc)) + "."
@@ -752,345 +500,131 @@ class ViewController: UIViewController {
     
     
     @IBAction func Division(_ sender: UIButton) {
-        
-        if Null == true || D == false{
-            if D == true {
-                Calc = Calc2/Calc
-                Calc2 = Calc
-                if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
-                    Solution.text = String(Int(Calc))
-                }
-                else {
-                    Solution.text = String(Calc)
-                }
-            }
-            if M == true {
-                Calc = Calc2*Calc
-                Calc2 = Calc
-                if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
-                    Solution.text = String(Int(Calc))
-                }
-                else {
-                    Solution.text = String(Calc)
-                }
-            }
-            if S == true {
-                Calc = Calc2-Calc
-                Calc2 = Calc
-                if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
-                    Solution.text = String(Int(Calc))
-                }
-                else {
-                    Solution.text = String(Calc)
-                }
-                
-            }
-            if A == true{
-                Calc = Calc2+Calc
-                Calc2 = Calc
-                if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
-                    Solution.text = String(Int(Calc))
-                }
-                else {
-                    Solution.text = String(Calc)
-                }
-                
-            }
-            
-            
-            D = true
-            M = false
-            S = false
-            A = false
-            
-            if Calc2 == 0 || Null == true{
-                Calc2 = Calc
-                Calc = 0
-            }
-            Calc = 0
-            Dot = false
-            V = 1
-            PM = false
-            V2 = 1
-            Null = false
-            
-            
-            MB.alpha = TestH(H: M)
-            DB.alpha = TestH(H: D)
-            SB.alpha = TestH(H: S)
-            AB.alpha = TestH(H: A)
-            ACB.setTitle("C", for: .normal)
-        } else {}
+        if Null == false && ActionCheck == true{
+        D = true
+        M = false
+        S = false
+        A = false
+        }
+        else if Null == true{Action()}
+        Action2()
+        D = true
+        M = false
+        S = false
+        A = false
+        Action3()
     }
     @IBAction func Multiplication(_ sender: UIButton) {
-        
-        if Null == true || M == false {
-            if D == true {
-                Calc = Calc2/Calc
-                Calc2 = Calc
-                if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
-                    Solution.text = String(Int(Calc))
-                }
-                else {
-                    Solution.text = String(Calc)
-                }
-            }
-            if M == true {
-                Calc = Calc2*Calc
-                Calc2 = Calc
-                if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
-                    Solution.text = String(Int(Calc))
-                }
-                else {
-                    Solution.text = String(Calc)
-                }
-            }
-            if S == true {
-                Calc = Calc2-Calc
-                Calc2 = Calc
-                if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
-                    Solution.text = String(Int(Calc))
-                }
-                else {
-                    Solution.text = String(Calc)
-                }
-                
-            }
-            if A == true{
-                Calc = Calc2+Calc
-                Calc2 = Calc
-                if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
-                    Solution.text = String(Int(Calc))
-                }
-                else {
-                    Solution.text = String(Calc)
-                }
-                
-            }
-            
-            
-            D = false
-            M = true
-            S = false
-            A = false
-            
-            if Calc2 == 0 {
-                Calc2 = Calc
-                Calc = 0
-            }
-            Calc = 0
-            Dot = false
-            V = 1
-            PM = false
-            V2 = 1
-            Null = false
-            
-            
-            MB.alpha = TestH(H: M)
-            DB.alpha = TestH(H: D)
-            SB.alpha = TestH(H: S)
-            AB.alpha = TestH(H: A)
-            ACB.setTitle("C", for: .normal)
-        } else {}
+        if Null == false && ActionCheck == true{
+        D = false
+        M = true
+        S = false
+        A = false
+    }
+    else if Null == true{Action()}
+        Action2()
+        D = false
+        M = true
+        S = false
+        A = false
+        Action3()
     }
     @IBAction func Subtraction(_ sender: UIButton) {
-        
-        if Null == true || S == false {
-            if D == true {
-                Calc = Calc2/Calc
-                Calc2 = Calc
-                if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
-                    Solution.text = String(Int(Calc))
-                }
-                else {
-                    Solution.text = String(Calc)
-                }
-            }
-            if M == true {
-                Calc = Calc2*Calc
-                Calc2 = Calc
-                if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
-                    Solution.text = String(Int(Calc))
-                }
-                else {
-                    Solution.text = String(Calc)
-                }
-            }
-            if S == true {
-                Calc = Calc2-Calc
-                Calc2 = Calc
-                if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
-                    Solution.text = String(Int(Calc))
-                }
-                else {
-                    Solution.text = String(Calc)
-                }
-                
-            }
-            if A == true{
-                Calc = Calc2+Calc
-                Calc2 = Calc
-                if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
-                    Solution.text = String(Int(Calc))
-                }
-                else {
-                    Solution.text = String(Calc)
-                }
-                
-            }
-            
-            
-            
-            
-            D = false
-            M = false
-            S = true
-            A = false
-            
-            if Calc2 == 0 {
-                Calc2 = Calc
-                Calc = 0
-            }
-            Calc = 0
-            Dot = false
-            V = 1
-            PM = false
-            V2 = 1
-            Null = false
-            
-            MB.alpha = TestH(H: M)
-            DB.alpha = TestH(H: D)
-            SB.alpha = TestH(H: S)
-            AB.alpha = TestH(H: A)
-            ACB.setTitle("C", for: .normal)
-        } else {}
+        if Null == false && ActionCheck == true{
+        D = false
+        M = false
+        S = true
+        A = false
+        }
+        else if Null == true{Action()}
+        Action2()
+        D = false
+        M = false
+        S = true
+        A = false
+        Action3()
     }
-    @IBAction func Addition(_ sender: UIButton) {
-        
-        if Null == true || A == false {
-            if D == true {
-                Calc = Calc2/Calc
-                Calc2 = Calc
-                if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
-                    Solution.text = String(Int(Calc))
-                }
-                else {
-                    Solution.text = String(Calc)
-                }
-            }
-            if M == true {
-                Calc = Calc2*Calc
-                Calc2 = Calc
-                if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
-                    Solution.text = String(Int(Calc))
-                }
-                else {
-                    Solution.text = String(Calc)
-                }
-            }
-            if S == true {
-                Calc = Calc2-Calc
-                Calc2 = Calc
-                if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
-                    Solution.text = String(Int(Calc))
-                }
-                else {
-                    Solution.text = String(Calc)
-                }
-                
-            }
-            if A == true{
-                Calc = Calc2+Calc
-                Calc2 = Calc
-                if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
-                    Solution.text = String(Int(Calc))
-                }
-                else {
-                    Solution.text = String(Calc)
-                }
-                
-            }
-            
-            
-            
-            
-            D = false
-            M = false
-            S = false
-            A = true
-            
-            
-            if Calc2 == 0 {
-                Calc2 = Calc
-                Calc = 0
-            }
-            
-            Calc = 0
-            Dot = false
-            V = 1
-            PM = false
-            V2 = 1
-            Null = false
-            
-            MB.alpha = TestH(H: M)
-            DB.alpha = TestH(H: D)
-            SB.alpha = TestH(H: S)
-            AB.alpha = TestH(H: A)
-            ACB.setTitle("C", for: .normal)
-        } else {}
+    @IBAction func Addition(_ sender: UIButton) {if Null == false && ActionCheck == true{
+        D = false
+        M = false
+        S = false
+        A = true
     }
-    
+    else if Null == true{Action()}
+        Action2()
+        D = false
+        M = false
+        S = false
+        A = true
+        Action3()
+    }
     @IBAction func Result(_ sender: UIButton) {
+        ResultAction = true
+        if ResultBCheck == false{
+        if D == true {
+            Calc3 = Calc
+            Calc = Calc2 / Calc
+            Calc2 = Calc
+        }
+        if M == true {
+            Calc3 = Calc
+            Calc = Calc2 * Calc
+            Calc2 = Calc
+        }
+        if S == true {
+            Calc3 = Calc
+            Calc = Calc2 - Calc
+            Calc2 = Calc
+        }
+        if A == true {
+            Calc3 = Calc
+            Calc = Calc2 + Calc
+            Calc2 = Calc
+        }
         
-        if D == true || M == true || S == true || A == true {
-            
-            ResultAction = true
+        if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
+            Solution.text = String(Int(Calc))
+        }
+        else {
+            Solution.text = String(Calc)
+        }
+        ActionCheck = true
+        MB.alpha = 1
+        DB.alpha = 1
+        SB.alpha = 1
+        AB.alpha = 1
+        ResultBCheck = true}
+        else{
             if D == true {
-                Calc = Calc2 / Calc
+                Calc = Calc2 / Calc3
                 Calc2 = Calc
             }
             if M == true {
-                Calc = Calc2 * Calc
+                Calc = Calc2 * Calc3
                 Calc2 = Calc
             }
             if S == true {
-                Calc = Calc2 - Calc
+                Calc = Calc2 - Calc3
                 Calc2 = Calc
             }
             if A == true {
-                Calc = Calc2 + Calc
+                Calc = Calc2 + Calc3
                 Calc2 = Calc
             }
-            
             if (Calc*2).truncatingRemainder(dividingBy: 2) == 0{
                 Solution.text = String(Int(Calc))
             }
             else {
                 Solution.text = String(Calc)
             }
-            
-            Calc = 0
-            Dot = false
-            V = 1
-            V2 = 1
-            
-            D = false
-            M = false
-            S = false
-            A = false
-            PM = false
             Null = false
-            
+            ActionCheck = true
             MB.alpha = 1
             DB.alpha = 1
             SB.alpha = 1
             AB.alpha = 1
-            
-            ACB.setTitle("C", for: .normal)
-            
-        } else {}
+        }
     }
-        
     override func viewDidLoad() {
         super.viewDidLoad()
         
